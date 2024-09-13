@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ToggleButton
+        android:id="@+id/togCarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="63dp"
+        android:text="ToggleButton"
+        android:textOff="AÇ"
+        android:textOn="KAPA"
+        app:layout_constraintBottom_toTopOf="@+id/islem"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/togBol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="63dp"
+        android:text="ToggleButton"
+        android:textOff="AÇ"
+        android:textOn="KAPA"
+        app:layout_constraintBottom_toTopOf="@+id/islem"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/togCik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="ToggleButton"
+        android:textOff="AÇ"
+        android:textOn="KAPA"
+        app:layout_constraintEnd_toEndOf="@+id/togBol"
+        app:layout_constraintStart_toStartOf="@+id/togBol"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ToggleButton
+        android:id="@+id/togTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="ToggleButton"
+        android:textOff="AÇ"
+        android:textOn="KAPA"
+        app:layout_constraintEnd_toEndOf="@+id/togCarp"
+        app:layout_constraintStart_toStartOf="@+id/togCarp"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Toplama"
+        app:layout_constraintEnd_toEndOf="@+id/togTop"
+        app:layout_constraintStart_toStartOf="@+id/togTop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Çıkarma"
+        app:layout_constraintEnd_toEndOf="@+id/togCik"
+        app:layout_constraintStart_toStartOf="@+id/togCik"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:text="Çarpma"
+        app:layout_constraintBottom_toTopOf="@+id/togCarp"
+        app:layout_constraintEnd_toEndOf="@+id/togCarp"
+        app:layout_constraintStart_toStartOf="@+id/togCarp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:text="Bölme"
+        app:layout_constraintBottom_toTopOf="@+id/togBol"
+        app:layout_constraintEnd_toEndOf="@+id/togBol"
+        app:layout_constraintStart_toStartOf="@+id/togBol" />
+
+    <TextView
+        android:id="@+id/islem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soru"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/deger"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="Tahmin değerini giriniz"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/soru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/islem" />
+
+    <Button
+        android:id="@+id/soru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Soru getir"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tahmin"
+        app:layout_constraintEnd_toStartOf="@+id/tahmin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tahmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="182dp"
+        android:text="Tahminde bulun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soru" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
