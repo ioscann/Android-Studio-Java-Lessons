@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Spinner</string>
+    
+    <string-array name="genderList">
+        <item>Erkek</item>
+        <item>Kadın</item>
+    </string-array>
+</resources>
